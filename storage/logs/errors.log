@@ -1,3 +1,10 @@
+[17-Dec-2022 19:13:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "StatisticService" not found in /var/www/html/condor/app/controllers/StatisticsController.php:35
+Stack trace:
+#0 /var/www/html/condor/index.php(116): StatisticsController->getStatistics()
+#1 /var/www/html/condor/index.php(153): EntryPoint->handleRouting()
+#2 /var/www/html/condor/index.php(157): EntryPoint->__init()
+#3 {main}
+  thrown in /var/www/html/condor/app/controllers/StatisticsController.php on line 35
 Array
 (
     [0] => Firebase\JWT\ExpiredException Object
@@ -12,7 +19,7 @@ Array
                     [0] => Array
                         (
                             [file] => /var/www/html/condor/app/controllers/StatisticsController.php
-                            [line] => 29
+                            [line] => 30
                             [function] => decode
                             [class] => Firebase\JWT\JWT
                             [type] => ::
@@ -21,7 +28,7 @@ Array
                     [1] => Array
                         (
                             [file] => /var/www/html/condor/index.php
-                            [line] => 118
+                            [line] => 116
                             [function] => getStatistics
                             [class] => StatisticsController
                             [type] => ->
@@ -30,7 +37,7 @@ Array
                     [2] => Array
                         (
                             [file] => /var/www/html/condor/index.php
-                            [line] => 154
+                            [line] => 153
                             [function] => handleRouting
                             [class] => EntryPoint
                             [type] => ->
@@ -39,7 +46,7 @@ Array
                     [3] => Array
                         (
                             [file] => /var/www/html/condor/index.php
-                            [line] => 158
+                            [line] => 157
                             [function] => __init
                             [class] => EntryPoint
                             [type] => ->
@@ -51,73 +58,48 @@ Array
         )
 
 )
-[17-Dec-2022 18:31:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function is_authenticated() in /var/www/html/condor/app/controllers/StatisticsController.php:36
-Stack trace:
-#0 /var/www/html/condor/index.php(118): StatisticsController->getStatistics()
-#1 /var/www/html/condor/index.php(154): EntryPoint->handleRouting()
-#2 /var/www/html/condor/index.php(158): EntryPoint->__init()
-#3 {main}
-  thrown in /var/www/html/condor/app/controllers/StatisticsController.php on line 36
 Array
 (
-    [0] => DomainException Object
+    [0] => Firebase\JWT\ExpiredException Object
         (
-            [message:protected] => Syntax error, malformed JSON
+            [message:protected] => Expired token
             [string:Exception:private] => 
             [code:protected] => 0
             [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
-            [line:protected] => 482
+            [line:protected] => 162
             [trace:Exception:private] => Array
                 (
                     [0] => Array
                         (
-                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
-                            [line] => 343
-                            [function] => handleJsonError
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 30
+                            [function] => decode
                             [class] => Firebase\JWT\JWT
                             [type] => ::
                         )
 
                     [1] => Array
                         (
-                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
-                            [line] => 106
-                            [function] => jsonDecode
-                            [class] => Firebase\JWT\JWT
-                            [type] => ::
-                        )
-
-                    [2] => Array
-                        (
-                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
-                            [line] => 29
-                            [function] => decode
-                            [class] => Firebase\JWT\JWT
-                            [type] => ::
-                        )
-
-                    [3] => Array
-                        (
                             [file] => /var/www/html/condor/index.php
-                            [line] => 113
+                            [line] => 116
                             [function] => getStatistics
                             [class] => StatisticsController
                             [type] => ->
                         )
 
-                    [4] => Array
+                    [2] => Array
                         (
                             [file] => /var/www/html/condor/index.php
-                            [line] => 149
+                            [line] => 153
                             [function] => handleRouting
                             [class] => EntryPoint
                             [type] => ->
                         )
 
-                    [5] => Array
+                    [3] => Array
                         (
                             [file] => /var/www/html/condor/index.php
-                            [line] => 153
+                            [line] => 157
                             [function] => __init
                             [class] => EntryPoint
                             [type] => ->
@@ -129,15 +111,162 @@ Array
         )
 
 )
-[17-Dec-2022 18:36:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Response" not found in /var/www/html/condor/index.php:103
-Stack trace:
-#0 /var/www/html/condor/index.php(149): EntryPoint->handleRouting()
-#1 /var/www/html/condor/index.php(153): EntryPoint->__init()
-#2 {main}
-  thrown in /var/www/html/condor/index.php on line 103
-[17-Dec-2022 18:36:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Response" not found in /var/www/html/condor/index.php:103
-Stack trace:
-#0 /var/www/html/condor/index.php(149): EntryPoint->handleRouting()
-#1 /var/www/html/condor/index.php(153): EntryPoint->__init()
-#2 {main}
-  thrown in /var/www/html/condor/index.php on line 103
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 30
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 116
+                            [function] => getStatistics
+                            [class] => StatisticsController
+                            [type] => ->
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 153
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 157
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 30
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 116
+                            [function] => getStatistics
+                            [class] => StatisticsController
+                            [type] => ->
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 153
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 157
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 31
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 116
+                            [function] => getStatistics
+                            [class] => StatisticsController
+                            [type] => ->
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 153
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 157
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)

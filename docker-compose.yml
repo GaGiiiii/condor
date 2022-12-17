@@ -1,0 +1,41 @@
+version: "3.7"
+services:
+
+  #PHP App
+  app:
+    image: gagiiiii/condor:latest
+    restart: always
+    working_dir: /var/www/html/condor
+    networks:
+      - landing
+
+  #Nginx Service
+  nginx:
+    image: nginx:mainline
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www/html/condor
+      - ./nginx/conf.d:/etc/nginx/conf.d/
+    networks:
+      - landing
+
+  #Mysl Service
+  mysql:
+    container_name: mysqlcontainer
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_DATABASE: condor
+      MYSQL_ROOT_PASSWORD: condor
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - landing
+    ports:
+      - "3306:3306"
+
+networks:
+  landing:
+    driver: bridge

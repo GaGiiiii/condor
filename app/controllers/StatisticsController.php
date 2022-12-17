@@ -3,7 +3,9 @@
 require_once "app/request/Request.php";
 require_once "app/response/Response.php";
 require_once "app/logger/Logger.php";
+require_once "app/services/statistics/StatisticsService.php";
 
+use Firebase\JWT\ExpiredException;
 use \Firebase\JWT\JWT;
 use \Firebase\JWT\Key;
 
@@ -31,16 +33,37 @@ class StatisticsController
             // Extract the data from the token
             $data = $decoded_token->data;
 
-            echo json_encode([
-                'message' => 'Welcome to sat page.'
-            ]);
-        } catch (\Exception $e) {
-            // Return an error if the token is invalid
+            Response::formatToJSON((new StatisticsService())->getData());
+        } catch (\InvalidArgumentException $e) {
+            Logger::log([$e]);
+
+            Response::formatToJSON([
+                'error' => "Server error"
+            ], 500);
+        } catch (\DomainException $e) {
+            Logger::log([$e]);
+
+            Response::formatToJSON([
+                'error' => "Server error"
+            ], 500);
+        } catch (ExpiredException $e) {
+            Logger::log([$e]);
+
+            Response::formatToJSON([
+                'error' => "Invalid token (expired)"
+            ], 401);
+        } catch (\UnexpectedValueException $e) {
             Logger::log([$e]);
 
             Response::formatToJSON([
                 'error' => "Invalid token"
             ], 401);
+        } catch (\Exception $e) {
+            Logger::log([$e]);
+
+            Response::formatToJSON([
+                'error' => "Server error"
+            ], 500);
         }
     }
 }
