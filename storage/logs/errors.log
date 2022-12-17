@@ -1,81 +1,143 @@
-[17-Dec-2022 15:11:25 Europe/Berlin] PHP Warning:  Undefined array key "POST" in /var/www/html/condor/index.php on line 67
-[17-Dec-2022 15:11:25 Europe/Berlin] PHP Warning:  Undefined array key "POST" in /var/www/html/condor/index.php on line 67
-[17-Dec-2022 15:11:25 Europe/Berlin] PHP Warning:  Undefined array key "POST" in /var/www/html/condor/index.php on line 67
-[17-Dec-2022 15:12:38 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: print_r() expects at least 1 argument, 0 given in /var/www/html/condor/index.php:71
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 29
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 118
+                            [function] => getStatistics
+                            [class] => StatisticsController
+                            [type] => ->
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 154
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 158
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+[17-Dec-2022 18:31:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function is_authenticated() in /var/www/html/condor/app/controllers/StatisticsController.php:36
 Stack trace:
-#0 /var/www/html/condor/index.php(71): print_r()
-#1 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#2 /var/www/html/condor/index.php(102): EntryPoint->__init()
+#0 /var/www/html/condor/index.php(118): StatisticsController->getStatistics()
+#1 /var/www/html/condor/index.php(154): EntryPoint->handleRouting()
+#2 /var/www/html/condor/index.php(158): EntryPoint->__init()
 #3 {main}
-  thrown in /var/www/html/condor/index.php on line 71
-[17-Dec-2022 15:20:55 Europe/Berlin] PHP Warning:  Undefined array key "username" in /var/www/html/condor/app/controllers/AuthController.php on line 7
-[17-Dec-2022 15:24:07 Europe/Berlin] PHP Warning:  Undefined array key "username" in /var/www/html/condor/app/controllers/AuthController.php on line 7
-[17-Dec-2022 15:24:26 Europe/Berlin] PHP Warning:  Undefined array key "username" in /var/www/html/condor/app/controllers/AuthController.php on line 11
-[17-Dec-2022 15:26:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Request" not found in /var/www/html/condor/app/controllers/AuthController.php:7
+  thrown in /var/www/html/condor/app/controllers/StatisticsController.php on line 36
+Array
+(
+    [0] => DomainException Object
+        (
+            [message:protected] => Syntax error, malformed JSON
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 482
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+                            [line] => 343
+                            [function] => handleJsonError
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+                            [line] => 106
+                            [function] => jsonDecode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 29
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 113
+                            [function] => getStatistics
+                            [class] => StatisticsController
+                            [type] => ->
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 149
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 153
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+[17-Dec-2022 18:36:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Response" not found in /var/www/html/condor/index.php:103
 Stack trace:
-#0 /var/www/html/condor/index.php(81): AuthController->login()
-#1 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#2 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#3 {main}
-  thrown in /var/www/html/condor/app/controllers/AuthController.php on line 7
-[17-Dec-2022 15:35:19 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in /var/www/html/condor/app/controllers/AuthController.php on line 21 and at least 3 expected in /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php:183
+#0 /var/www/html/condor/index.php(149): EntryPoint->handleRouting()
+#1 /var/www/html/condor/index.php(153): EntryPoint->__init()
+#2 {main}
+  thrown in /var/www/html/condor/index.php on line 103
+[17-Dec-2022 18:36:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Response" not found in /var/www/html/condor/index.php:103
 Stack trace:
-#0 /var/www/html/condor/app/controllers/AuthController.php(21): Firebase\JWT\JWT::encode()
-#1 /var/www/html/condor/index.php(81): AuthController->login()
-#2 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#3 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#4 {main}
-  thrown in /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php on line 183
-[17-Dec-2022 15:42:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Response" not found in /var/www/html/condor/app/controllers/AuthController.php:28
-Stack trace:
-#0 /var/www/html/condor/index.php(81): AuthController->login()
-#1 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#2 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#3 {main}
-  thrown in /var/www/html/condor/app/controllers/AuthController.php on line 28
-[17-Dec-2022 15:42:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Response\Response" not found in /var/www/html/condor/app/controllers/AuthController.php:28
-Stack trace:
-#0 /var/www/html/condor/index.php(81): AuthController->login()
-#1 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#2 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#3 {main}
-  thrown in /var/www/html/condor/app/controllers/AuthController.php on line 28
-[17-Dec-2022 15:55:32 Europe/Berlin] PHP Warning:  Array to string conversion in /var/www/html/condor/routes/v1/routes.php on line 29
-[17-Dec-2022 15:55:32 Europe/Berlin] PHP Warning:  Array to string conversion in /var/www/html/condor/routes/v1/routes.php on line 29
-[17-Dec-2022 15:55:32 Europe/Berlin] PHP Warning:  Array to string conversion in /var/www/html/condor/routes/v1/routes.php on line 29
-[17-Dec-2022 15:55:32 Europe/Berlin] PHP Warning:  Array to string conversion in /var/www/html/condor/routes/v1/routes.php on line 29
-[17-Dec-2022 15:55:32 Europe/Berlin] PHP Warning:  Array to string conversion in /var/www/html/condor/routes/v1/routes.php on line 29
-[17-Dec-2022 15:56:36 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function EntryPoint::{closure}(), 1 passed and exactly 2 expected in /var/www/html/condor/routes/v1/routes.php:28
-Stack trace:
-#0 [internal function]: EntryPoint->{closure}()
-#1 /var/www/html/condor/routes/v1/routes.php(31): array_map()
-#2 /var/www/html/condor/index.php(67): include('...')
-#3 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#4 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#5 {main}
-  thrown in /var/www/html/condor/routes/v1/routes.php on line 28
-[17-Dec-2022 15:58:03 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function EntryPoint::{closure}(), 1 passed and exactly 2 expected in /var/www/html/condor/routes/v1/routes.php:28
-Stack trace:
-#0 [internal function]: EntryPoint->{closure}()
-#1 /var/www/html/condor/routes/v1/routes.php(31): array_map()
-#2 /var/www/html/condor/index.php(67): include('...')
-#3 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#4 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#5 {main}
-  thrown in /var/www/html/condor/routes/v1/routes.php on line 28
-[17-Dec-2022 15:58:04 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function EntryPoint::{closure}(), 1 passed and exactly 2 expected in /var/www/html/condor/routes/v1/routes.php:28
-Stack trace:
-#0 [internal function]: EntryPoint->{closure}()
-#1 /var/www/html/condor/routes/v1/routes.php(31): array_map()
-#2 /var/www/html/condor/index.php(67): include('...')
-#3 /var/www/html/condor/index.php(98): EntryPoint->handleRouting()
-#4 /var/www/html/condor/index.php(102): EntryPoint->__init()
-#5 {main}
-  thrown in /var/www/html/condor/routes/v1/routes.php on line 28
-[17-Dec-2022 16:01:24 Europe/Berlin] PHP Warning:  Undefined variable $array in /var/www/html/condor/routes/v1/routes.php on line 34
-[17-Dec-2022 16:08:16 Europe/Berlin] PHP Warning:  Undefined array key "PROTECTED" in /var/www/html/condor/index.php on line 73
-[17-Dec-2022 16:08:16 Europe/Berlin] PHP Warning:  Undefined array key "PROTECTED" in /var/www/html/condor/index.php on line 73
-[17-Dec-2022 16:08:16 Europe/Berlin] PHP Warning:  Undefined array key "PROTECTED" in /var/www/html/condor/index.php on line 73
-[17-Dec-2022 16:08:44 Europe/Berlin] PHP Warning:  Undefined array key "PROTECTED" in /var/www/html/condor/index.php on line 73
-[17-Dec-2022 16:08:44 Europe/Berlin] PHP Warning:  Undefined array key "PROTECTED" in /var/www/html/condor/index.php on line 73
-[17-Dec-2022 16:08:44 Europe/Berlin] PHP Warning:  Undefined array key "PROTECTED" in /var/www/html/condor/index.php on line 73
+#0 /var/www/html/condor/index.php(149): EntryPoint->handleRouting()
+#1 /var/www/html/condor/index.php(153): EntryPoint->__init()
+#2 {main}
+  thrown in /var/www/html/condor/index.php on line 103

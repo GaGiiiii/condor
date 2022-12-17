@@ -1,5 +1,7 @@
 <?php
 
+require_once "app/response/Response.php";
+
 class EntryPoint
 {
     /**
@@ -79,37 +81,33 @@ class EntryPoint
         $httpVerb = $_SERVER['REQUEST_METHOD'];
 
         if ($httpVerb === "POST" && $_SERVER['CONTENT_TYPE'] !== 'application/json') {
-            http_response_code(400);
-            echo '400 API works only with JSON.';
+            Response::formatToJSON([
+                'message' => 'API works only with JSON.'
+            ], 400);
         }
 
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $uri = str_replace('/condor', '', $uri);
         $uri = str_replace('/index.php', '', $uri);
+        $uri = $uri === "" ? "/" : $uri;
 
         // Load the routes array
         include 'routes/v1/routes.php';
 
         // Check if the current request URI matches any of the defined routes
         foreach ($routes as $route => $actions) {
-
-            if (isset($actions['PROTECTED'])) {
-                if (!$this->authorizationTokenPresent()) {
-                    header('Content-Type: application/json');
-                    http_response_code(401);
-
-                    echo json_encode([
-                        'message' => 'You need to login for this action.',
-                    ]);
-
-                    exit;
-                }
-            }
-
             // Check if the current request httpVerb is supported by the route
             if (isset($actions[$httpVerb])) {
                 // Check if the current request URI matches the route pattern
                 if (preg_match("#^$route$#", $uri, $matches)) {
+
+                    if (isset($actions['PROTECTED'])) {
+                        if (!$this->authorizationTokenPresent()) {
+                            Response::formatToJSON([
+                                'message' => 'You need to login for this action.',
+                            ], 401);
+                        }
+                    }
                     // Extract any route parameters
                     $params = array_slice($matches, 1);
 
@@ -123,8 +121,9 @@ class EntryPoint
         }
 
         // If no matching route is found, return a 404 response
-        http_response_code(404);
-        echo '404 Not Found';
+        Response::formatToJSON([
+            'message' => 'Invalid endpoint'
+        ], 404);
     }
 
     /**
