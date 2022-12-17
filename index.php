@@ -2,7 +2,12 @@
 
 class EntryPoint
 {
-    private function loadEnv()
+    /**
+     * This function loads the .env file in root directory.
+     *
+     * @return void
+     */
+    private function loadEnv(): void
     {
         require_once "vendor/autoload.php";
 
@@ -10,7 +15,16 @@ class EntryPoint
         $dotenv->load();
     }
 
-    private function handleErrors()
+    /**
+     * This function handles errors.
+     *
+     * It checks if the app is in production or not. It it is in production
+     * Then errors will only be logged to file and not displayed on the screen
+     * Also it creates log file if it doesn't exist.
+     *
+     * @return void
+     */
+    private function handleErrors(): void
     {
         $pathToLogFile = __DIR__ . '/storage/logs/errors.log';
 
@@ -32,7 +46,12 @@ class EntryPoint
         error_log(print_r(error_get_last(), true), 3, $pathToLogFile);
     }
 
-    private function autoLoadControllers()
+    /**
+     * This function auto loads controllers.
+     *
+     * @return void
+     */
+    private function autoLoadControllers(): void
     {
         // Define the base directory for your controllers
         $baseDir = __DIR__ . '/app/controllers';
@@ -49,7 +68,12 @@ class EntryPoint
         });
     }
 
-    private function handleRouting()
+    /**
+     * This function handles routing in the application.
+     *
+     * @return void
+     */
+    private function handleRouting(): void
     {
         // Get the current request httpVerb and URI
         $httpVerb = $_SERVER['REQUEST_METHOD'];
@@ -68,6 +92,19 @@ class EntryPoint
 
         // Check if the current request URI matches any of the defined routes
         foreach ($routes as $route => $actions) {
+
+            if (isset($actions['PROTECTED'])) {
+                if (!$this->authorizationTokenPresent()) {
+                    header('Content-Type: application/json');
+                    http_response_code(401);
+
+                    echo json_encode([
+                        'message' => 'You need to login for this action.',
+                    ]);
+
+                    exit;
+                }
+            }
 
             // Check if the current request httpVerb is supported by the route
             if (isset($actions[$httpVerb])) {
@@ -90,7 +127,26 @@ class EntryPoint
         echo '404 Not Found';
     }
 
-    public function __init()
+    /**
+     * This function checks if authorization header is present in correct format
+     *
+     * @return bool
+     */
+    private function authorizationTokenPresent(): bool
+    {
+        // Read the token from the header
+        $headers = getallheaders();
+        $auth_header = $headers['Authorization'] ?? '';
+
+        return preg_match('/^Bearer (\S+)$/', $auth_header, $match);
+    }
+
+    /**
+     * This function init's the application.
+     *
+     * @return void
+     */
+    public function __init(): void
     {
         $this->loadEnv();
         $this->handleErrors();

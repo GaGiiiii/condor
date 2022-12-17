@@ -18,6 +18,7 @@ $routes = [
 
     '/fetch' => [
         'GET' => 'StatisticsController@getStatistics',
+        'PROTECTED' => true
     ],
 
     '/login' => [
@@ -25,7 +26,7 @@ $routes = [
     ],
 ];
 
-
+// Add /v1 prefix to routes
 foreach ($routes as $key => $value) {
     if ($key != '/') {
         $new_key = "/v1" . $key;
