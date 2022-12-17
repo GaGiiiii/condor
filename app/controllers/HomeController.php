@@ -5,9 +5,7 @@ class HomeController
     public function index()
     {
         echo json_encode([
-            'data' => [
-                'gagi' => 'ez'
-            ]
+            'message' => 'Welcome to home page.'
         ]);
     }
 }
