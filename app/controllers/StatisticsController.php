@@ -1,10 +1,10 @@
 <?php
 
-require_once "app/request/Request.php";
-require_once "app/response/Response.php";
-require_once "app/logger/Logger.php";
-require_once "app/services/statistics/StatisticsService.php";
+namespace App\Controllers;
 
+use App\Logger\Logger;
+use App\Response\Response;
+use App\Services\Statistics\StatisticsService;
 use Firebase\JWT\ExpiredException;
 use \Firebase\JWT\JWT;
 use \Firebase\JWT\Key;

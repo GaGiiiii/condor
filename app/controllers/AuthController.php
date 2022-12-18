@@ -1,8 +1,9 @@
 <?php
 
-require_once "app/request/Request.php";
-require_once "app/response/Response.php";
+namespace App\Controllers;
 
+use App\Request\Request;
+use App\Response\Response;
 use \Firebase\JWT\JWT;
 
 class AuthController

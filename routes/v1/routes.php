@@ -5,24 +5,24 @@
 // Define an array of routes
 $routes = [
     '/' => [
-        'GET' => 'HomeController@index',
+        'GET' => 'App\Controllers\HomeController@index',
     ],
 
     '/users' => [
-        'GET' => 'UsersController@index',
+        'GET' => 'App\Controllers\UsersController@index',
     ],
 
     '/users/(\d+)' => [
-        'GET' => 'UsersController@show',
+        'GET' => 'App\Controllers\UsersController@show',
     ],
 
     '/fetch' => [
-        'GET' => 'StatisticsController@getStatistics',
+        'GET' => 'App\Controllers\StatisticsController@getStatistics',
         'PROTECTED' => true
     ],
 
     '/login' => [
-        'POST' => 'AuthController@login',
+        'POST' => 'App\Controllers\AuthController@login',
     ],
 ];
 

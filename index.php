@@ -1,6 +1,6 @@
 <?php
 
-require_once "app/response/Response.php";
+use App\Response\Response;
 
 class EntryPoint
 {
@@ -53,19 +53,30 @@ class EntryPoint
      *
      * @return void
      */
-    private function autoLoadControllers(): void
+    private function autoload(): void
     {
-        // Define the base directory for your controllers
-        $baseDir = __DIR__ . '/app/controllers';
-
         // Register the autoloader function
-        spl_autoload_register(function ($className) use ($baseDir) {
-            // Convert the class name to a file name
-            $fileName = str_replace('\\', '/', $className) . '.php';
+        spl_autoload_register(function ($class) {
+            // Split the class name into an array of parts
+            $parts = explode('\\', $class);
 
-            // Include the file if it exists
-            if (file_exists($baseDir . '/' . $fileName)) {
-                require $baseDir . '/' . $fileName;
+            // Remove the last element (which should be the class name)
+            $class = array_pop($parts);
+
+            // Search for PHP files in the src directory and its subdirectories
+            $pattern = __DIR__ . '/app/**/*.php';
+
+            foreach (glob($pattern) as $file) {
+                $info = pathinfo($file);
+                // print "<pre>";
+                // print_r("INFO: " . $info['filename'] . "\n");
+                // print_r("CLASS: " . $class . "\n");
+                // print "</pre>";
+                if ($info['filename'] === $class) {
+                    require_once $file;
+
+                    return;
+                }
             }
         });
     }
@@ -92,10 +103,14 @@ class EntryPoint
         $uri = $uri === "" ? "/" : $uri;
 
         // Load the routes array
-        include 'routes/v1/routes.php';
+        include_once 'routes/v1/routes.php';
 
         // Check if the current request URI matches any of the defined routes
         foreach ($routes as $route => $actions) {
+            // print "<pre>";
+            // print_r("Route: " . $route . "\n");
+            // print_r("URI: " . $uri . "\n");
+            // print "</pre>";
             // Check if the current request httpVerb is supported by the route
             if (isset($actions[$httpVerb])) {
                 // Check if the current request URI matches the route pattern
@@ -108,6 +123,7 @@ class EntryPoint
                             ], 401);
                         }
                     }
+
                     // Extract any route parameters
                     $params = array_slice($matches, 1);
 
@@ -149,7 +165,7 @@ class EntryPoint
     {
         $this->loadEnv();
         $this->handleErrors();
-        $this->autoLoadControllers();
+        $this->autoload();
         $this->handleRouting();
     }
 }

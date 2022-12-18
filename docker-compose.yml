@@ -6,6 +6,8 @@ services:
     image: gagiiiii/condor:latest
     restart: always
     working_dir: /var/www/html/condor
+    volumes:
+      - ./:/var/www/html/condor
     networks:
       - landing
 

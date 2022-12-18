@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Request;
+
+use stdClass;
+
 class Request
 {
     /**

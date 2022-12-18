@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Services\Statistics;
+
 class StatisticsService
 {
     public function getData(): array
