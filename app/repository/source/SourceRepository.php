@@ -4,6 +4,7 @@
 namespace App\Repository\Source;
 
 use App\Database\Database;
+use App\Logger\Logger;
 use Exception;
 use PDO;
 use PDOException;

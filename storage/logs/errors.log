@@ -27,3 +27,114 @@ Stack trace:
 #4 /var/www/html/condor/index.php(172): EntryPoint->__init()
 #5 {main}
   thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 18
+[18-Dec-2022 12:54:25 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\Source\Logger" not found in /var/www/html/condor/app/repository/source/SourceRepository.php:23
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(37): App\Services\Statistics\StatisticsService->getData()
+#2 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 23
+Array
+(
+    [0] => PDOException Object
+        (
+            [message:protected] => SQLSTATE[42S02]: Base table or view not found: 1146 Table 'condor.sources' doesn't exist
+            [string:Exception:private] => 
+            [code:protected] => 42S02
+            [file:protected] => /var/www/html/condor/app/repository/source/SourceRepository.php
+            [line:protected] => 19
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/repository/source/SourceRepository.php
+                            [line] => 19
+                            [function] => execute
+                            [class] => PDOStatement
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/app/services/statistics/StatisticsService.php
+                            [line] => 18
+                            [function] => getAll
+                            [class] => App\Repository\Source\SourceRepository
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 37
+                            [function] => getData
+                            [class] => App\Services\Statistics\StatisticsService
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+            [errorInfo] => Array
+                (
+                    [0] => 42S02
+                    [1] => 1146
+                    [2] => Table 'condor.sources' doesn't exist
+                )
+
+        )
+
+)
