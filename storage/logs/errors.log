@@ -1,0 +1,29 @@
+[18-Dec-2022 12:37:18 UTC] PHP Fatal error:  Uncaught Error: Class "App\Database\PDO" not found in /var/www/html/condor/app/database/Database.php:18
+Stack trace:
+#0 /var/www/html/condor/app/database/Database.php(28): App\Database\Database->__construct()
+#1 /var/www/html/condor/app/repository/source/SourceRepository.php(15): App\Database\Database::getInstance()
+#2 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
+#3 /var/www/html/condor/app/controllers/StatisticsController.php(38): App\Services\Statistics\StatisticsService->getData()
+#4 /var/www/html/condor/index.php(131): App\Controllers\StatisticsController->getStatistics()
+#5 /var/www/html/condor/index.php(168): EntryPoint->handleRouting()
+#6 /var/www/html/condor/index.php(172): EntryPoint->__init()
+#7 {main}
+  thrown in /var/www/html/condor/app/database/Database.php on line 18
+[18-Dec-2022 12:37:30 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\Source\PDO" not found in /var/www/html/condor/app/repository/source/SourceRepository.php:17
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(38): App\Services\Statistics\StatisticsService->getData()
+#2 /var/www/html/condor/index.php(131): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(168): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(172): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 17
+[18-Dec-2022 12:37:49 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\Source\PDO" not found in /var/www/html/condor/app/repository/source/SourceRepository.php:18
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(38): App\Services\Statistics\StatisticsService->getData()
+#2 /var/www/html/condor/index.php(131): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(168): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(172): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 18

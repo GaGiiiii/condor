@@ -64,18 +64,14 @@ class EntryPoint
             $class = array_pop($parts);
 
             // Search for PHP files in the src directory and its subdirectories
-            $pattern = __DIR__ . '/app/**/*.php';
+            $dir = new RecursiveDirectoryIterator(__DIR__ . '/app/');
 
-            foreach (glob($pattern) as $file) {
-                $info = pathinfo($file);
-                // print "<pre>";
-                // print_r("INFO: " . $info['filename'] . "\n");
-                // print_r("CLASS: " . $class . "\n");
-                // print "</pre>";
-                if ($info['filename'] === $class) {
-                    require_once $file;
-
-                    return;
+            foreach (new RecursiveIteratorIterator($dir) as $file) {
+                if (pathinfo($file, PATHINFO_EXTENSION) == 'php') {
+                    $info = pathinfo($file);
+                    if ($info['filename'] === $class) {
+                        require_once $file;
+                    }
                 }
             }
         });

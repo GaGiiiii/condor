@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Logger\Logger;
+use App\Repository\Source\SourceRepository;
 use App\Response\Response;
 use App\Services\Statistics\StatisticsService;
 use Firebase\JWT\ExpiredException;
@@ -33,7 +34,7 @@ class StatisticsController
             // Extract the data from the token
             $data = $decoded_token->data;
 
-            Response::formatToJSON((new StatisticsService())->getData());
+            Response::formatToJSON((new StatisticsService(new SourceRepository()))->getData());
         } catch (\InvalidArgumentException $e) {
             Logger::log([$e]);
 
