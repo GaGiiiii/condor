@@ -2,8 +2,6 @@
 
 namespace App\Services\Statistics;
 
-use IStatisticsSource;
-
 class DatabaseStatistics implements IStatisticsSource
 {
 
@@ -14,7 +12,7 @@ class DatabaseStatistics implements IStatisticsSource
      */
     public function getData(): int
     {
-        // Call google api with cURL, Guzzle
+        // Call database and get data
         // Do the logic and return data
 
         return mt_rand(0, 1000);

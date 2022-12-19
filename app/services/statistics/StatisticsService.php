@@ -15,8 +15,15 @@ class StatisticsService
 
     public function getData(): array
     {
+        $data = [];
         $sources = $this->sourceRepository->getAll();
 
-        return $sources;
+        foreach ($sources as $source) {
+            $fullNamespace = "\\" . __NAMESPACE__ . "\\";
+            $className = $fullNamespace . $source['name'] . "Statistics";
+            $data[$source['name']] = (new $className())->getData();
+        }
+
+        return $data;
     }
 }

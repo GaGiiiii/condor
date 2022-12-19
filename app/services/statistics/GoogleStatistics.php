@@ -2,8 +2,6 @@
 
 namespace App\Services\Statistics;
 
-use IStatisticsSource;
-
 class GoogleStatistics implements IStatisticsSource
 {
 

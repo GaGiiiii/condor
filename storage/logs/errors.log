@@ -1,74 +1,38 @@
-[18-Dec-2022 12:37:18 UTC] PHP Fatal error:  Uncaught Error: Class "App\Database\PDO" not found in /var/www/html/condor/app/database/Database.php:18
-Stack trace:
-#0 /var/www/html/condor/app/database/Database.php(28): App\Database\Database->__construct()
-#1 /var/www/html/condor/app/repository/source/SourceRepository.php(15): App\Database\Database::getInstance()
-#2 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
-#3 /var/www/html/condor/app/controllers/StatisticsController.php(38): App\Services\Statistics\StatisticsService->getData()
-#4 /var/www/html/condor/index.php(131): App\Controllers\StatisticsController->getStatistics()
-#5 /var/www/html/condor/index.php(168): EntryPoint->handleRouting()
-#6 /var/www/html/condor/index.php(172): EntryPoint->__init()
-#7 {main}
-  thrown in /var/www/html/condor/app/database/Database.php on line 18
-[18-Dec-2022 12:37:30 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\Source\PDO" not found in /var/www/html/condor/app/repository/source/SourceRepository.php:17
-Stack trace:
-#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
-#1 /var/www/html/condor/app/controllers/StatisticsController.php(38): App\Services\Statistics\StatisticsService->getData()
-#2 /var/www/html/condor/index.php(131): App\Controllers\StatisticsController->getStatistics()
-#3 /var/www/html/condor/index.php(168): EntryPoint->handleRouting()
-#4 /var/www/html/condor/index.php(172): EntryPoint->__init()
-#5 {main}
-  thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 17
-[18-Dec-2022 12:37:49 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\Source\PDO" not found in /var/www/html/condor/app/repository/source/SourceRepository.php:18
-Stack trace:
-#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
-#1 /var/www/html/condor/app/controllers/StatisticsController.php(38): App\Services\Statistics\StatisticsService->getData()
-#2 /var/www/html/condor/index.php(131): App\Controllers\StatisticsController->getStatistics()
-#3 /var/www/html/condor/index.php(168): EntryPoint->handleRouting()
-#4 /var/www/html/condor/index.php(172): EntryPoint->__init()
-#5 {main}
-  thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 18
-[18-Dec-2022 12:54:25 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\Source\Logger" not found in /var/www/html/condor/app/repository/source/SourceRepository.php:23
-Stack trace:
-#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(18): App\Repository\Source\SourceRepository->getAll()
-#1 /var/www/html/condor/app/controllers/StatisticsController.php(37): App\Services\Statistics\StatisticsService->getData()
-#2 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
-#3 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
-#4 /var/www/html/condor/index.php(169): EntryPoint->__init()
-#5 {main}
-  thrown in /var/www/html/condor/app/repository/source/SourceRepository.php on line 23
 Array
 (
-    [0] => PDOException Object
+    [0] => DomainException Object
         (
-            [message:protected] => SQLSTATE[42S02]: Base table or view not found: 1146 Table 'condor.sources' doesn't exist
+            [message:protected] => Syntax error, malformed JSON
             [string:Exception:private] => 
-            [code:protected] => 42S02
-            [file:protected] => /var/www/html/condor/app/repository/source/SourceRepository.php
-            [line:protected] => 19
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 482
             [trace:Exception:private] => Array
                 (
                     [0] => Array
                         (
-                            [file] => /var/www/html/condor/app/repository/source/SourceRepository.php
-                            [line] => 19
-                            [function] => execute
-                            [class] => PDOStatement
-                            [type] => ->
+                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+                            [line] => 343
+                            [function] => handleJsonError
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
                             [args] => Array
                                 (
+                                    [0] => 4
                                 )
 
                         )
 
                     [1] => Array
                         (
-                            [file] => /var/www/html/condor/app/services/statistics/StatisticsService.php
-                            [line] => 18
-                            [function] => getAll
-                            [class] => App\Repository\Source\SourceRepository
-                            [type] => ->
+                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+                            [line] => 110
+                            [function] => jsonDecode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
                             [args] => Array
                                 (
+                                    [0] => {"iss":"condor.com","iat":1671473995,"exp":16714775vÆŽMK™]HŽžÈ\Ù\›˜[YHŽˆ™ØYÚHŸ_
                                 )
 
                         )
@@ -76,12 +40,19 @@ Array
                     [2] => Array
                         (
                             [file] => /var/www/html/condor/app/controllers/StatisticsController.php
-                            [line] => 37
-                            [function] => getData
-                            [class] => App\Services\Statistics\StatisticsService
-                            [type] => ->
+                            [line] => 38
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
                             [args] => Array
                                 (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1dsaOTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVI
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
                                 )
 
                         )
@@ -128,13 +99,262 @@ Array
                 )
 
             [previous:Exception:private] => 
-            [errorInfo] => Array
+        )
+
+)
+Array
+(
+    [0] => DomainException Object
+        (
+            [message:protected] => Syntax error, malformed JSON
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 482
+            [trace:Exception:private] => Array
                 (
-                    [0] => 42S02
-                    [1] => 1146
-                    [2] => Table 'condor.sources' doesn't exist
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+                            [line] => 343
+                            [function] => handleJsonError
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 4
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+                            [line] => 106
+                            [function] => jsonDecode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => zÌ‰ÑåÀˆè‰)]Pˆ°‰…±œˆè‰!LÈÔØ‰
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 38
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => esyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1OTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVI
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
                 )
 
+            [previous:Exception:private] => 
+        )
+
+)
+Array
+(
+    [0] => Firebase\JWT\SignatureInvalidException Object
+        (
+            [message:protected] => Signature verification failed
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 140
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 38
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1OTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVId
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+Array
+(
+    [0] => Firebase\JWT\SignatureInvalidException Object
+        (
+            [message:protected] => Signature verification failed
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 140
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 38
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1OTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVId
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
         )
 
 )

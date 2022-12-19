@@ -2,8 +2,6 @@
 
 namespace App\Services\Statistics;
 
-use IStatisticsSource;
-
 class PositiveGuysStatistics implements IStatisticsSource
 {
 

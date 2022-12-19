@@ -33,12 +33,12 @@ services:
       MYSQL_ROOT_PASSWORD: condor
     volumes:
       - ./mysql:/var/lib/mysql
-      - ./condor.sql:/scripts/condor.sql
+      - ./condor.sql:/docker-entrypoint-initdb.d/condor.sql
     networks:
       - landing
     ports:
       - "3306:3306"
-    command: sh -c "mysql -u root -p condor -v < /scripts/condor.sql"
+    #command: sh -c "mysql --protocol=tcp -u root -pcondor -v < /scripts/condor.sql"
 
 networks:
   landing:

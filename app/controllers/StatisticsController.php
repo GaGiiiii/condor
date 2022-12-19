@@ -14,6 +14,12 @@ class StatisticsController
 {
     public function getStatistics()
     {
+        /*
+        WE DON'T NEED TO DO ANY OF THESE CHECKS FOR TOKEN,
+        WE ONLY NEED TO DO THIS IF WE WANT TO CHECK IF USER IS AUTHORIZED
+        TO DO THIS ACTION, HE IS MOST DEFINITELY AUTHENTICATED SINCE THIS IS
+        HANDLED IN THE ROUTER!!!!!!
+        */
         $headers = getallheaders();
         $auth_header = $headers['Authorization'] ?? '';
 
@@ -34,36 +40,46 @@ class StatisticsController
             // Extract the data from the token
             $data = $decoded_token->data;
 
-            Response::formatToJSON((new StatisticsService(new SourceRepository()))->getData());
+            $responseData = [
+                'data' => (new StatisticsService(new SourceRepository()))->getData(),
+                'message' => "Statistics returned successfully."
+            ];
+
+            Response::formatToJSON($responseData);
         } catch (\InvalidArgumentException $e) {
             Logger::log([$e]);
 
             Response::formatToJSON([
-                'error' => "Server error"
+                'error' => true,
+                'message' => "Server error"
             ], 500);
         } catch (\DomainException $e) {
             Logger::log([$e]);
 
             Response::formatToJSON([
-                'error' => "Server error"
+                'error' => true,
+                'message' => "Invalid token (domain)"
             ], 500);
         } catch (ExpiredException $e) {
             Logger::log([$e]);
 
             Response::formatToJSON([
-                'error' => "Invalid token (expired)"
+                'error' => true,
+                'message' => "Invalid token (expired)"
             ], 401);
         } catch (\UnexpectedValueException $e) {
             Logger::log([$e]);
 
             Response::formatToJSON([
-                'error' => "Invalid token"
+                'error' => true,
+                'message' => "Invalid token (value)"
             ], 401);
         } catch (\Exception $e) {
             Logger::log([$e]);
 
             Response::formatToJSON([
-                'error' => "Server error"
+                'error' => true,
+                'message' => "Server error"
             ], 500);
         }
     }

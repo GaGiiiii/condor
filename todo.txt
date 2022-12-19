@@ -5,3 +5,4 @@
 5. Parallel req.
 6. Migrations.
 7. try catch in services and controllers
+8. Clear index.php
