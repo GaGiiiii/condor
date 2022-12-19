@@ -2,6 +2,7 @@
 
 namespace App\Services\Statistics;
 
+use App\Logger\Logger;
 use App\Repository\Source\SourceRepository;
 
 class StatisticsService
@@ -41,6 +42,26 @@ class StatisticsService
         foreach ($sources as $source) {
             $fullNamespace = "\\" . __NAMESPACE__ . "\\";
             $className = $fullNamespace . $source['name'] . "Statistics";
+
+            // Fail silently and log error.
+            if (!class_exists($className)) {
+                Logger::log([
+                    'message' => "Class $className doesn't exist.",
+                    'called_in' => "StatisticsService.php @getData()"
+                ]);
+
+                continue;
+            }
+
+            // Fail silently and log error.
+            if (!method_exists($className, $methodName)) {
+                Logger::log([
+                    'message' => "Method $methodName() doesn't exist in class $className.",
+                    'called_in' => "StatisticsService.php @getData()"
+                ]);
+
+                continue;
+            }
 
             if ($type === 'period') {
                 $data[$source['name']] = (new $className())->$methodName();

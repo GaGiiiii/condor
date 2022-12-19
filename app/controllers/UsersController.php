@@ -2,29 +2,27 @@
 
 namespace App\Controllers;
 
+use App\Response\Response;
+
 class UsersController
 {
+    /**
+     * This function returns all users.
+     */
     public function index()
     {
-        echo 12;
+        Response::generateResponse([
+            'message' => "Returns all users."
+        ]);
     }
 
+    /** 
+     * This function returns user with specific ID.
+     */
     public function show($id)
     {
-        // Read the user with the given ID
-        // Return the user data
-        echo $id;
-    }
-
-    public function updateAction($id)
-    {
-        // Update the user with the given ID
-        // Return the updated user data
-    }
-
-    public function deleteAction($id)
-    {
-        // Delete the user with the given ID
-        // Return a success message
+        Response::generateResponse([
+            'message' => "Returns user with ID: $id."
+        ]);
     }
 }

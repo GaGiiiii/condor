@@ -4,6 +4,7 @@ namespace App\Request;
 
 use App\Exceptions\JWTException;
 use App\Logger\Logger;
+use App\Response\Response;
 use Firebase\JWT\ExpiredException;
 use \Firebase\JWT\JWT;
 use \Firebase\JWT\Key;
@@ -13,7 +14,28 @@ use stdClass;
 class Request
 {
     /**
-     * This function takes data from request and decodes it.
+     * This function takes requests body and transforms it to the stdClass.
+     *
+     * @return stdClass
+     */
+    public static function generateRequest(): stdClass
+    {
+        $headers = getallheaders();
+        $acceptHeader = $headers['Content-Type'];
+
+        if ($acceptHeader === 'application/json') {
+            return self::formatFromJSON();
+        }
+
+        if ($acceptHeader === 'application/xml') {
+            return self::formatFromXML();
+        }
+
+        return self::formatFromJSON();
+    }
+
+    /**
+     * This function takes data from request and decodes it to JSON.
      *
      * @return stdClass
      */
@@ -22,9 +44,47 @@ class Request
         $raw_data = file_get_contents('php://input');
         $data = json_decode($raw_data);
 
+        if ($data === null) {
+            Response::generateResponse([
+                'error' => true,
+                'message' => 'Invalid JSON sent, please check your request body.'
+            ], 400);
+        }
+
         return $data;
     }
 
+    /**
+     * This function takes data from request and decodes it to XML.
+     *
+     * @return stdClass
+     */
+    public static function formatFromXML(): stdClass
+    {
+        $raw_data = file_get_contents('php://input');
+        $sxml = @simplexml_load_string($raw_data); // @ - means don't show warnings or errors.
+
+        if ($sxml === FALSE) {
+            Response::generateResponse([
+                'error' => true,
+                'message' => 'Invalid XML sent, please check your request body.'
+            ], 400);
+        }
+
+        return json_decode(json_encode($sxml));
+    }
+
+    /**
+     * This function checks if query parameter is present or not.
+     *
+     * If query parameter is present it will returns its value and if its not
+     * Then it will return default value, if default value is provided, if its not
+     * Then it will return null.
+     *
+     * @param string $name
+     * @param string $default = null
+     * @return string|null  
+     */
     public static function query(string $name, string $default = null): ?string
     {
         return isset($_GET[$name]) ? $_GET[$name] : $default;

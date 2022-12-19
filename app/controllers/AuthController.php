@@ -8,9 +8,15 @@ use \Firebase\JWT\JWT;
 
 class AuthController
 {
+
+    /**
+     * This function handles the login logic.
+     *
+     * It's placeholder function that always returns token and successful login.
+     */
     public function login()
     {
-        $data = Request::formatFromJSON();
+        $data = Request::generateRequest();
 
         $payload = [
             'iss' => 'condor.com',
@@ -23,11 +29,10 @@ class AuthController
         ];
 
         $secret =  $_ENV['JWT_SECRET'];
-
         $token = JWT::encode($payload, $secret, 'HS256');
 
         // Return the token
-        return Response::formatToJSON([
+        return Response::generateResponse([
             'success' => true,
             'token' => $token,
         ]);

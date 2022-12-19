@@ -49,13 +49,13 @@ class EntryPoint
     }
 
     /**
-     * This function auto loads controllers.
+     * This function auto-loads classes.
      *
      * @return void
      */
     private function autoload(): void
     {
-        // Register the autoloader function
+        // Register the auto-loader function
         spl_autoload_register(function ($class) {
             // Split the class name into an array of parts
             $parts = explode('\\', $class);
@@ -69,6 +69,7 @@ class EntryPoint
             foreach (new RecursiveIteratorIterator($dir) as $file) {
                 if (pathinfo($file, PATHINFO_EXTENSION) == 'php') {
                     $info = pathinfo($file);
+
                     if ($info['filename'] === $class) {
                         require_once $file;
                     }
@@ -86,12 +87,6 @@ class EntryPoint
     {
         // Get the current request httpVerb and URI
         $httpVerb = $_SERVER['REQUEST_METHOD'];
-
-        if ($httpVerb === "POST" && $_SERVER['CONTENT_TYPE'] !== 'application/json') {
-            Response::formatToJSON([
-                'message' => 'API works only with JSON.'
-            ], 400);
-        }
 
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $uri = str_replace('/condor', '', $uri);
@@ -111,10 +106,10 @@ class EntryPoint
             if (isset($actions[$httpVerb])) {
                 // Check if the current request URI matches the route pattern
                 if (preg_match("#^$route$#", $uri, $matches)) {
-
                     if (isset($actions['PROTECTED'])) {
                         if (!$this->authorizationTokenPresent()) {
-                            Response::formatToJSON([
+                            Response::generateResponse([
+                                'error' => true,
                                 'message' => 'You need to login for this action.',
                             ], 401);
                         }
@@ -133,8 +128,9 @@ class EntryPoint
         }
 
         // If no matching route is found, return a 404 response
-        Response::formatToJSON([
-            'message' => 'Invalid endpoint'
+        Response::generateResponse([
+            'error' => true,
+            'message' => 'Invalid endpoint.'
         ], 404);
     }
 
@@ -147,9 +143,9 @@ class EntryPoint
     {
         // Read the token from the header
         $headers = getallheaders();
-        $auth_header = $headers['Authorization'] ?? '';
+        $authHeader = $headers['Authorization'] ?? '';
 
-        return preg_match('/^Bearer (\S+)$/', $auth_header, $match);
+        return preg_match('/^Bearer (\S+)$/', $authHeader, $match);
     }
 
     /**

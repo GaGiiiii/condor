@@ -1,13 +1,8 @@
 ============= IN THE FUTURE =============
 
 1. Add tests.
-2. Try catch in the services and controllers.
-3. Custom Exceptions.
-4. Clear index.php.
-5. Add XML support.
-6. Caching.
-7. Request spam handle. 
-8. Day, Week, Month, Year -----> DONE
+2. Caching.
+4. Create READ.MD file.
 
 ============= IN THE FUTURE =============
 
@@ -16,3 +11,4 @@
 3. Dependency injection.
 4. Parallel requests to the APIs.
 5. Migrations.
+6. Request rate limit.

@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "ea191bd1-96e3-4243-ae90-ff145d968a6b",
+		"name": "Condor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9941995"
+	},
+	"item": [
+		{
+			"name": "XML",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/condor/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"condor",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Single",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/condor/v1/users/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"condor",
+										"v1",
+										"users",
+										"123"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/condor/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Statistics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDkxOTM2LCJleHAiOjE2NzE0OTU1MzYsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.7SMQ1x5zPl4So0BYorVMIx34bu_0CQXrrgFHapfuous",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/condor/v1/fetch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								"v1",
+								"fetch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\"?>\n<root>\n  <username>gagi</username>\n</root>",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/condor/index.php/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								"index.php",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/condor/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"condor",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Single",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/condor/v1/users/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"condor",
+										"v1",
+										"users",
+										"123"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/condor/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Statistics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDkxOTM2LCJleHAiOjE2NzE0OTU1MzYsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.7SMQ1x5zPl4So0BYorVMIx34bu_0CQXrrgFHapfuous",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/condor/v1/fetch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								"v1",
+								"fetch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\"?>\n<root>\n  <username>gagi</username>\n</root>",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/condor/index.php/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								"index.php",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INVALID",
+			"item": [
+				{
+					"name": "Not Logged In",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/condor/v1/fetch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								"v1",
+								"fetch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Body Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\"?>\n<root>\n  <username>gagi</username>\n</root>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/condor/index.php/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"condor",
+								"index.php",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

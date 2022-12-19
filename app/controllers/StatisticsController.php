@@ -11,6 +11,14 @@ use App\Services\Statistics\StatisticsService;
 
 class StatisticsController
 {
+    /**
+     * This function returns statistics for number of visits on clients site.
+     *
+     * It can accept query parameters. It accepts "type" query parameter.
+     * "Type" parameter can have values: day, week, month, year, period.
+     * If "type" parameter has value period then client needs to provide 
+     * "startDate" and "endDate" parameters as well. 
+     */
     public function getStatistics()
     {
         try {
@@ -22,7 +30,7 @@ class StatisticsController
 
             // This should be moved from controllers to custom request validation class.
             if (strtolower($type) === 'period' && (!isset($startDate) || !isset($endDate))) {
-                Response::formatToJSON([
+                Response::generateResponse([
                     'error' => true,
                     'message' => "Please provide start date and end date query parameters."
                 ], 422);
@@ -34,16 +42,16 @@ class StatisticsController
                 'message' => "Statistics returned successfully."
             ];
 
-            Response::formatToJSON($responseData);
+            Response::generateResponse($responseData);
         } catch (JWTException $e) {
-            Response::formatToJSON([
+            Response::generateResponse([
                 'error' => true,
                 'message' => $e->getMessage()
             ], $e->getCode());
         } catch (\Exception $e) {
             Logger::log([$e]);
 
-            Response::formatToJSON([
+            Response::generateResponse([
                 'error' => true,
                 'message' => "Server error"
             ], 500);
