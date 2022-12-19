@@ -1,8 +1,18 @@
+============= IN THE FUTURE =============
+
 1. Add tests.
-2. Multiple log files.
-3. Validation and clean inputs.
-4. Add services and dependency injection.
-5. Parallel req.
-6. Migrations.
-7. try catch in services and controllers
-8. Clear index.php
+2. Try catch in the services and controllers.
+3. Custom Exceptions.
+4. Clear index.php.
+5. Add XML support.
+6. Caching.
+7. Request spam handle. 
+8. Day, Week, Month, Year -----> DONE
+
+============= IN THE FUTURE =============
+
+1. Multiple log files.
+2. Request validation, cleaning inputs.
+3. Dependency injection.
+4. Parallel requests to the APIs.
+5. Migrations.

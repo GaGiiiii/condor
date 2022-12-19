@@ -358,3 +358,331 @@ Array
         )
 
 )
+[19-Dec-2022 20:38:45 UTC] PHP Fatal error:  Uncaught Error: Class "App\Request\JWT" not found in /var/www/html/condor/app/request/Request.php:46
+Stack trace:
+#0 /var/www/html/condor/app/controllers/StatisticsController.php(21): App\Request\Request::user()
+#1 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#2 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#3 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#4 {main}
+  thrown in /var/www/html/condor/app/request/Request.php on line 46
+[19-Dec-2022 20:39:20 UTC] PHP Fatal error:  Uncaught Error: Class "App\Request\Logger" not found in /var/www/html/condor/app/request/Request.php:65
+Stack trace:
+#0 /var/www/html/condor/app/controllers/StatisticsController.php(18): App\Request\Request::user()
+#1 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#2 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#3 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#4 {main}
+  thrown in /var/www/html/condor/app/request/Request.php on line 65
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/request/Request.php
+                            [line] => 51
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1OTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVI
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 18
+                            [function] => user
+                            [class] => App\Request\Request
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+[19-Dec-2022 20:39:32 UTC] PHP Deprecated:  Required parameter $statusCode follows optional parameter $code in /var/www/html/condor/app/exceptions/JWTException.php on line 11
+[19-Dec-2022 20:39:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/exceptions/JWTException.php:11) in /var/www/html/condor/app/response/Response.php on line 15
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/request/Request.php
+                            [line] => 51
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1OTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVI
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 18
+                            [function] => user
+                            [class] => App\Request\Request
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/request/Request.php
+                            [line] => 51
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDczOTk1LCJleHAiOjE2NzE0Nzc1OTUsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.IMpnChsF2cOEpy0Klb1NUQk-JWzj5Ih5uzTMRzmwpVI
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 18
+                            [function] => user
+                            [class] => App\Request\Request
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 128
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 169
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+[19-Dec-2022 21:03:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method App\Services\Statistics\DatabaseStatistics::getDataByPeriod() in /var/www/html/condor/app/services/statistics/StatisticsService.php:44
+Stack trace:
+#0 /var/www/html/condor/app/controllers/StatisticsController.php(22): App\Services\Statistics\StatisticsService->getData('period')
+#1 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#2 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#3 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#4 {main}
+  thrown in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 44
+[19-Dec-2022 21:03:49 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 44 and exactly 1 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(44): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(22): App\Services\Statistics\StatisticsService->getData('period')
+#2 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[19-Dec-2022 21:09:56 UTC] PHP Fatal error:  Uncaught TypeError: App\Request\Request::query(): Return value must be of type string, null returned in /var/www/html/condor/app/request/Request.php:30
+Stack trace:
+#0 /var/www/html/condor/app/controllers/StatisticsController.php(20): App\Request\Request::query('startDate')
+#1 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#2 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#3 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#4 {main}
+  thrown in /var/www/html/condor/app/request/Request.php on line 30
+[19-Dec-2022 21:11:06 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 46 and exactly 1 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(46): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(24): App\Services\Statistics\StatisticsService->getData('period', NULL, NULL)
+#2 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[19-Dec-2022 21:12:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 46 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(46): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(24): App\Services\Statistics\StatisticsService->getData('period', NULL, NULL)
+#2 /var/www/html/condor/index.php(128): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(165): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(169): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64

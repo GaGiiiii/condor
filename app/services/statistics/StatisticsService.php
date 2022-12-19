@@ -13,15 +13,42 @@ class StatisticsService
         $this->sourceRepository = $sourceRepository;
     }
 
-    public function getData(): array
+    public function getData(string $type = null, $startDate = null, $endDate = null): array
     {
         $data = [];
         $sources = $this->sourceRepository->getAll();
 
+        switch (strtolower($type)) {
+            case "day":
+                $methodName = "getDataByDay";
+                break;
+            case "week":
+                $methodName = "getDataByWeek";
+                break;
+            case "month":
+                $methodName = "getDataByMonth";
+                break;
+            case "year":
+                $methodName = "getDataByYear";
+                break;
+            case "period":
+                $methodName = "getDataFromPeriod";
+                break;
+            default:
+                $methodName = "getDataByMonth";
+        }
+
         foreach ($sources as $source) {
             $fullNamespace = "\\" . __NAMESPACE__ . "\\";
             $className = $fullNamespace . $source['name'] . "Statistics";
-            $data[$source['name']] = (new $className())->getData();
+
+            if ($type === 'period') {
+                $data[$source['name']] = (new $className())->$methodName();
+
+                continue;
+            }
+
+            $data[$source['name']] = (new $className())->$methodName($startDate, $endDate);
         }
 
         return $data;
