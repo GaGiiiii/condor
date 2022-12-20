@@ -50,6 +50,6 @@ RUN apt-get update && apt-get install -y libmagickwand-dev --no-install-recommen
 
 COPY --chown=www-data:www-data . .
 
-RUN chmod -R 755 /var/www/html/condor/storage
+RUN chmod -R 777 /var/www/html/condor/storage
 RUN composer i
 RUN composer dump-autoload
