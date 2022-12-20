@@ -6,9 +6,8 @@ use App\Exceptions\JWTException;
 use App\Logger\Logger;
 use App\Response\Response;
 use Firebase\JWT\ExpiredException;
-use \Firebase\JWT\JWT;
-use \Firebase\JWT\Key;
-
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 use stdClass;
 
 class Request
@@ -64,7 +63,7 @@ class Request
         $raw_data = file_get_contents('php://input');
         $sxml = @simplexml_load_string($raw_data); // @ - means don't show warnings or errors.
 
-        if ($sxml === FALSE) {
+        if ($sxml === false) {
             Response::generateResponse([
                 'error' => true,
                 'message' => 'Invalid XML sent, please check your request body.'
@@ -83,7 +82,7 @@ class Request
      *
      * @param string $name
      * @param string $default = null
-     * @return string|null  
+     * @return string|null
      */
     public static function query(string $name, string $default = null): ?string
     {

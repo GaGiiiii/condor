@@ -16,8 +16,8 @@ class StatisticsController
      *
      * It can accept query parameters. It accepts "type" query parameter.
      * "Type" parameter can have values: day, week, month, year, period.
-     * If "type" parameter has value period then client needs to provide 
-     * "startDate" and "endDate" parameters as well. 
+     * If "type" parameter has value period then client needs to provide
+     * "startDate" and "endDate" parameters as well.
      */
     public function getStatistics()
     {

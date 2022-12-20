@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Repository\Source;
 
 use App\Database\Database;
@@ -11,7 +10,6 @@ use PDOException;
 
 class SourceRepository implements ISourceRepository
 {
-
     public function getAll(): array
     {
         try {

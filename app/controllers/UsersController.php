@@ -16,7 +16,7 @@ class UsersController
         ]);
     }
 
-    /** 
+    /**
      * This function returns user with specific ID.
      */
     public function show($id)

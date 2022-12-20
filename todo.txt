@@ -2,7 +2,6 @@
 
 1. Add tests.
 2. Caching.
-4. Create READ.MD file.
 
 ============= IN THE FUTURE =============
 

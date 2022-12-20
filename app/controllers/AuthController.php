@@ -4,11 +4,10 @@ namespace App\Controllers;
 
 use App\Request\Request;
 use App\Response\Response;
-use \Firebase\JWT\JWT;
+use Firebase\JWT\JWT;
 
 class AuthController
 {
-
     /**
      * This function handles the login logic.
      *

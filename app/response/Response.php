@@ -10,7 +10,7 @@ class Response
      * This function accepts array as data and transforms it to JSON or XML.
      *
      * @param array $data = []
-     * @param int $statusCode = 200 
+     * @param int $statusCode = 200
      */
     public static function generateResponse(array $data = [], int $statusCode = 200)
     {

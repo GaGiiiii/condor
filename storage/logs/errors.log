@@ -1,0 +1,134 @@
+Array
+(
+    [0] => PDOException Object
+        (
+            [message:protected] => SQLSTATE[HY000] [2002] Connection refused
+            [string:Exception:private] => 
+            [code:protected] => 2002
+            [file:protected] => /var/www/html/condor/app/database/Database.php
+            [line:protected] => 20
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/database/Database.php
+                            [line] => 20
+                            [function] => __construct
+                            [class] => PDO
+                            [type] => ->
+                            [args] => Array
+                                (
+                                    [0] => mysql:host=mysqlcontainer;dbname=condor
+                                    [1] => root
+                                    [2] => condor
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/app/database/Database.php
+                            [line] => 30
+                            [function] => __construct
+                            [class] => App\Database\Database
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/app/repository/source/SourceRepository.php
+                            [line] => 18
+                            [function] => getInstance
+                            [class] => App\Database\Database
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/app/services/statistics/StatisticsService.php
+                            [line] => 20
+                            [function] => getAll
+                            [class] => App\Repository\Source\SourceRepository
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 40
+                            [function] => getData
+                            [class] => App\Services\Statistics\StatisticsService
+                            [type] => ->
+                            [args] => Array
+                                (
+                                    [0] => month
+                                    [1] => 
+                                    [2] => 
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 123
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 161
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+            [errorInfo] => Array
+                (
+                    [0] => HY000
+                    [1] => 2002
+                    [2] => Connection refused
+                )
+
+        )
+
+)
