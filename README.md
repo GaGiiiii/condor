@@ -32,7 +32,7 @@ docker-compose up -d
 You can run test by typing the following command
 
 ```bash
-docker-compose exec app ./vendor/bin/phpunit ./app/tests/statistics/StatisticsTest.php 
+composer run tests
 ```
 
 ---
