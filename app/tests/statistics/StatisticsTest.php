@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class StatisticsTest extends TestCase
 {
-    private string $APP_URL = "http://localhost/condor";
+    private string $APP_URL = "http://nginxcontainer/condor";
 
     public function testGetStatistics()
     {

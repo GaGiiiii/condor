@@ -13,6 +13,7 @@ services:
 
   #Nginx Service
   nginx:
+    container_name: nginxcontainer
     image: nginx:mainline
     restart: always
     ports:
