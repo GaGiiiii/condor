@@ -187,14 +187,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost/condor/index.php/v1/login",
+							"raw": "http://localhost/condor/v1/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"path": [
 								"condor",
-								"index.php",
 								"v1",
 								"login"
 							]
@@ -340,7 +339,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDkxOTM2LCJleHAiOjE2NzE0OTU1MzYsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.7SMQ1x5zPl4So0BYorVMIx34bu_0CQXrrgFHapfuous",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNTU2MTAzLCJleHAiOjE2NzE1NTk3MDMsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.T4hIHZPKEqKI8uHQgJH2j9gj0gusWtd6HudYbOTif28",
 								"type": "text"
 							}
 						],
@@ -385,14 +384,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost/condor/index.php/v1/login",
+							"raw": "http://localhost/condor/v1/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"path": [
 								"condor",
-								"index.php",
 								"v1",
 								"login"
 							]
@@ -462,14 +460,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost/condor/index.php/v1/login",
+							"raw": "http://localhost/condor/v1/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"path": [
 								"condor",
-								"index.php",
 								"v1",
 								"login"
 							]

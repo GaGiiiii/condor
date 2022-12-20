@@ -2,7 +2,6 @@
 
 namespace App\Tests\Statistics;
 
-use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use PHPUnit\Framework\TestCase;
