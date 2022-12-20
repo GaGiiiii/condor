@@ -71,43 +71,25 @@ GET /v1/fetch
 | `startDate` | `string` | **Optional** Start date. |
 | `endDate` | `string` | **Optional** End date. |
 
-### Saved cars
+### Users
 
 ---
 
-#### Get all saved cars
+#### Get all users
 
 ```http
-GET /api/saved-cars
+GET /v1/users
+```
+
+#### Get single user
+
+```http
+GET /v1/users/{id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `user` | `integer` | **Optional** ID of user to which car belongs to. |
-| `type` | `integer` | **Optional** ID of type to which car belongs to. |
-
-
-#### Add new saved car
-
-```http
-POST /api/saved-cars
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `type_id` | `integer` | **Required** ID of type to which saved car belongs to. |
-| `token` | `string` | **Required** Users token. |
-
-#### Delete saved car
-
-```http
-DELETE /api/saved-cars/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id` | `integer` | **Required** ID of saved car intended to delete. |
-| `token` | `string` | **Required** Users token. |
+| `id` | `integer` | **Required** ID of the user that you are looking for. |
 
 ---
 
