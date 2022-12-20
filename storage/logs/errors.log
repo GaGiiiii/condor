@@ -34,3 +34,92 @@ Array
         )
 
 )
+Array
+(
+    [0] => Firebase\JWT\ExpiredException Object
+        (
+            [message:protected] => Expired token
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /var/www/html/condor/app/request/Request.php
+                            [line] => 115
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDkxOTM2LCJleHAiOjE2NzE0OTU1MzYsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.7SMQ1x5zPl4So0BYorVMIx34bu_0CQXrrgFHapfuous
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 26
+                            [function] => user
+                            [class] => App\Request\Request
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 123
+                            [function] => getStatistics
+                            [class] => App\Controllers\StatisticsController
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 161
+                            [function] => handleRouting
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /var/www/html/condor/index.php
+                            [line] => 165
+                            [function] => __init
+                            [class] => EntryPoint
+                            [type] => ->
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
