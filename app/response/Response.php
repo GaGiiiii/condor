@@ -52,6 +52,7 @@ class Response
     public static function formatToXML(array $data, int $statusCode)
     {
         header("Content-Type: application/xml");
+        http_response_code($statusCode);
         $xml = new SimpleXMLElement('<root/>');
         self::arrayToXML($data, $xml);
         echo $xml->asXML();
