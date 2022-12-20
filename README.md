@@ -35,6 +35,12 @@ Finally start the application by running the command
 docker-compose up -d
 ```
 
+You can run test by typing the following command
+
+```bash
+./vendor/bin/phpunit ./app/tests/statistics/StatisticsTest.php 
+```
+
 ---
 
 ## API Documentation  
