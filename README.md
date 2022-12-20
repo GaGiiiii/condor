@@ -23,12 +23,6 @@ Enter the project directory
 cd condor
 ```
 
-Now we need to change permissions of the storage folder for the application to work properly
-
-```bash
-sudo chmod -R 777 storage/logs
-```
-
 Finally start the application by running the command
 
 ```bash
@@ -38,7 +32,7 @@ docker-compose up -d
 You can run test by typing the following command
 
 ```bash
-./vendor/bin/phpunit ./app/tests/statistics/StatisticsTest.php 
+docker-compose exec app ./vendor/bin/phpunit ./app/tests/statistics/StatisticsTest.php 
 ```
 
 ---
