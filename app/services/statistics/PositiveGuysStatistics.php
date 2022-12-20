@@ -20,6 +20,7 @@ use App\Repository\Source\SourceRepository;
 
 class PositiveGuysStatistics implements IStatisticsSource
 {
+    private string $name = "PositiveGuys";
     private SourceRepository $sourceRepository;
 
     public function __construct(SourceRepository $sourceRepository)
@@ -34,9 +35,8 @@ class PositiveGuysStatistics implements IStatisticsSource
      */
     public function getDataByDay(): int
     {
-        $name = 'PositiveGuys';
         $type = 'day';
-        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
+        $lastCall = $this->sourceRepository->getLastAPICall($this->name, $type);
 
         // It doesn't exist in the table.
         if ($lastCall === false) {
@@ -46,7 +46,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->insertLastAPICall([
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -73,7 +73,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->updateLastAPICall($lastCall['id'], [
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -92,9 +92,8 @@ class PositiveGuysStatistics implements IStatisticsSource
      */
     public function getDataByWeek(): int
     {
-        $name = 'PositiveGuys';
         $type = 'week';
-        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
+        $lastCall = $this->sourceRepository->getLastAPICall($this->name, $type);
 
         // It doesn't exist in the table.
         if ($lastCall === false) {
@@ -104,7 +103,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->insertLastAPICall([
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -131,7 +130,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->updateLastAPICall($lastCall['id'], [
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -150,9 +149,8 @@ class PositiveGuysStatistics implements IStatisticsSource
      */
     public function getDataByMonth(): int
     {
-        $name = 'PositiveGuys';
         $type = 'month';
-        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
+        $lastCall = $this->sourceRepository->getLastAPICall($this->name, $type);
 
         // It doesn't exist in the table.
         if ($lastCall === false) {
@@ -162,7 +160,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->insertLastAPICall([
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -189,7 +187,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->updateLastAPICall($lastCall['id'], [
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -208,9 +206,8 @@ class PositiveGuysStatistics implements IStatisticsSource
      */
     public function getDataByYear(): int
     {
-        $name = 'PositiveGuys';
         $type = 'year';
-        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
+        $lastCall = $this->sourceRepository->getLastAPICall($this->name, $type);
 
         // It doesn't exist in the table.
         if ($lastCall === false) {
@@ -220,7 +217,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->insertLastAPICall([
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
@@ -247,7 +244,7 @@ class PositiveGuysStatistics implements IStatisticsSource
             $valueFromGoogle = mt_rand(0, 1000);
 
             $this->sourceRepository->updateLastAPICall($lastCall['id'], [
-                'source_name' => $name,
+                'source_name' => $this->name,
                 'called_at' => date("Y-m-d H:i:s"),
                 'type' => $type,
                 'latest_data' => $valueFromGoogle
