@@ -11,6 +11,9 @@ namespace App\Services\Statistics;
  * Instead we should take the data from the database cache to save some time.
  * If the last call was made more than 5 minutes ago we should then call positive guy API, get
  * Their response and save that response in database cache.
+ *
+ * Database table should contain TIMESTAMP of the last call to the API as well as the name of the SERVICE
+ * And the TYPE (day, week, month, year, period). In case of the period we should always call google API.
  */
 
 class PositiveGuysStatistics implements IStatisticsSource

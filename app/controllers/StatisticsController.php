@@ -36,6 +36,8 @@ class StatisticsController
                 ], 422);
             }
 
+            // ADD MORE VALIDATIONS, CHECK IF DATES ARE VALID, IF END DATE IS AFTER START DATE ETC..
+
             $responseData = [
                 'data' => (new StatisticsService(new SourceRepository()))->getData($type, $startDate, $endDate),
                 'type' => $type,

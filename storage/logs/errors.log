@@ -1,49 +1,109 @@
+[20-Dec-2022 16:57:03 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:57:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:57:19 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:57:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:57:28 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:57:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:58:22 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:58:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:58:32 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:58:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:58:47 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:58:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:59:03 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:59:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:59:41 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:59:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 16:59:57 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 16:59:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:00:51 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:00:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:01:48 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:01:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:101) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:02:22 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:02:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:02:31 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:02:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:02:43 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:02:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:106) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:02:55 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:02:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:106) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:03:04 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:03:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:106) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:03:06 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:03:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:106) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:03:28 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:03:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:106) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:03:39 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:03:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:108) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:03:50 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:03:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:04:09 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:04:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:101) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:04:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:101) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:05:17 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:05:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:101) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:05:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:101) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:05:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/index.php:101) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:06:28 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:06:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:06:37 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:06:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:07:20 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:07:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:08:25 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:08:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:08:31 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:08:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:08:48 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:08:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:09:37 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:09:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:09:44 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:09:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:10:03 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:10:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:10:18 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:10:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
+[20-Dec-2022 17:10:23 UTC] PHP Warning:  Undefined array key "Accept" in /var/www/html/condor/app/response/Response.php on line 18
+[20-Dec-2022 17:10:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/condor/app/response/Response.php:18) in /var/www/html/condor/app/response/Response.php on line 39
 Array
 (
-    [0] => PDOException Object
+    [0] => Firebase\JWT\ExpiredException Object
         (
-            [message:protected] => SQLSTATE[HY000] [2002] Connection refused
+            [message:protected] => Expired token
             [string:Exception:private] => 
-            [code:protected] => 2002
-            [file:protected] => /var/www/html/condor/app/database/Database.php
-            [line:protected] => 20
+            [code:protected] => 0
+            [file:protected] => /var/www/html/condor/vendor/firebase/php-jwt/src/JWT.php
+            [line:protected] => 162
             [trace:Exception:private] => Array
                 (
                     [0] => Array
                         (
-                            [file] => /var/www/html/condor/app/database/Database.php
-                            [line] => 20
-                            [function] => __construct
-                            [class] => PDO
-                            [type] => ->
+                            [file] => /var/www/html/condor/app/request/Request.php
+                            [line] => 115
+                            [function] => decode
+                            [class] => Firebase\JWT\JWT
+                            [type] => ::
                             [args] => Array
                                 (
-                                    [0] => mysql:host=mysqlcontainer;dbname=condor
-                                    [1] => root
-                                    [2] => condor
+                                    [0] => eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb25kb3IuY29tIiwiaWF0IjoxNjcxNDkxOTM2LCJleHAiOjE2NzE0OTU1MzYsImRhdGEiOnsidXNlcm5hbWUiOiJnYWdpIn19.7SMQ1x5zPl4So0BYorVMIx34bu_0CQXrrgFHapfuous
+                                    [1] => Firebase\JWT\Key Object
+                                        (
+                                            [keyMaterial:Firebase\JWT\Key:private] => blablasecret
+                                            [algorithm:Firebase\JWT\Key:private] => HS256
+                                        )
+
                                 )
 
                         )
 
                     [1] => Array
                         (
-                            [file] => /var/www/html/condor/app/database/Database.php
-                            [line] => 30
-                            [function] => __construct
-                            [class] => App\Database\Database
-                            [type] => ->
-                            [args] => Array
-                                (
-                                )
-
-                        )
-
-                    [2] => Array
-                        (
-                            [file] => /var/www/html/condor/app/repository/source/SourceRepository.php
-                            [line] => 18
-                            [function] => getInstance
-                            [class] => App\Database\Database
+                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
+                            [line] => 26
+                            [function] => user
+                            [class] => App\Request\Request
                             [type] => ::
                             [args] => Array
                                 (
@@ -51,36 +111,7 @@ Array
 
                         )
 
-                    [3] => Array
-                        (
-                            [file] => /var/www/html/condor/app/services/statistics/StatisticsService.php
-                            [line] => 20
-                            [function] => getAll
-                            [class] => App\Repository\Source\SourceRepository
-                            [type] => ->
-                            [args] => Array
-                                (
-                                )
-
-                        )
-
-                    [4] => Array
-                        (
-                            [file] => /var/www/html/condor/app/controllers/StatisticsController.php
-                            [line] => 40
-                            [function] => getData
-                            [class] => App\Services\Statistics\StatisticsService
-                            [type] => ->
-                            [args] => Array
-                                (
-                                    [0] => month
-                                    [1] => 
-                                    [2] => 
-                                )
-
-                        )
-
-                    [5] => Array
+                    [2] => Array
                         (
                             [file] => /var/www/html/condor/index.php
                             [line] => 123
@@ -93,7 +124,7 @@ Array
 
                         )
 
-                    [6] => Array
+                    [3] => Array
                         (
                             [file] => /var/www/html/condor/index.php
                             [line] => 161
@@ -106,7 +137,7 @@ Array
 
                         )
 
-                    [7] => Array
+                    [4] => Array
                         (
                             [file] => /var/www/html/condor/index.php
                             [line] => 165
@@ -122,13 +153,78 @@ Array
                 )
 
             [previous:Exception:private] => 
-            [errorInfo] => Array
-                (
-                    [0] => HY000
-                    [1] => 2002
-                    [2] => Connection refused
-                )
-
         )
 
 )
+[20-Dec-2022 17:41:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:42:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:42:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:42:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:43:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:43:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:44:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64
+[20-Dec-2022 17:44:26 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Services\Statistics\DatabaseStatistics::getDataFromPeriod(), 0 passed in /var/www/html/condor/app/services/statistics/StatisticsService.php on line 67 and exactly 2 expected in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php:64
+Stack trace:
+#0 /var/www/html/condor/app/services/statistics/StatisticsService.php(67): App\Services\Statistics\DatabaseStatistics->getDataFromPeriod()
+#1 /var/www/html/condor/app/controllers/StatisticsController.php(42): App\Services\Statistics\StatisticsService->getData('period', '2022-05-05', '2022-06-06')
+#2 /var/www/html/condor/index.php(123): App\Controllers\StatisticsController->getStatistics()
+#3 /var/www/html/condor/index.php(161): EntryPoint->handleRouting()
+#4 /var/www/html/condor/index.php(165): EntryPoint->__init()
+#5 {main}
+  thrown in /var/www/html/condor/app/services/statistics/DatabaseStatistics.php on line 64

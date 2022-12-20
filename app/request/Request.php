@@ -20,7 +20,7 @@ class Request
     public static function generateRequest(): stdClass
     {
         $headers = getallheaders();
-        $acceptHeader = $headers['Content-Type'];
+        $acceptHeader = isset($headers['Content-Type']) ? $headers['Content-Type'] : '';
 
         if ($acceptHeader === 'application/json') {
             return self::formatFromJSON();

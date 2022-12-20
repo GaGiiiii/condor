@@ -15,7 +15,7 @@ class Response
     public static function generateResponse(array $data = [], int $statusCode = 200)
     {
         $headers = getallheaders();
-        $acceptHeader = $headers['Accept'];
+        $acceptHeader = isset($headers['Accept']) ? $headers['Accept'] : '';
 
         if ($acceptHeader === 'application/json') {
             return self::formatToJSON($data, $statusCode);

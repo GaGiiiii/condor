@@ -64,12 +64,12 @@ class StatisticsService
             }
 
             if ($type === 'period') {
-                $data[$source['name']] = (new $className())->$methodName();
+                $data[$source['name']] = (new $className())->$methodName($startDate, $endDate);
 
                 continue;
             }
 
-            $data[$source['name']] = (new $className())->$methodName($startDate, $endDate);
+            $data[$source['name']] = (new $className())->$methodName();
         }
 
         return $data;
