@@ -1,6 +1,6 @@
 ============= NOW =============
 
-1. Add tests.
+1. Update SQL FILE
 
 ============= IN THE FUTURE =============
 
@@ -10,3 +10,4 @@
 4. Parallel requests to the APIs.
 5. Migrations.
 6. Request rate limit.
+7. Add DTO's

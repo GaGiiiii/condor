@@ -2,6 +2,9 @@
 
 namespace App\Services\Statistics;
 
+use App\Logger\Logger;
+use App\Repository\Source\SourceRepository;
+
 /**
  * ========= IMPORTANT =========
  *
@@ -18,6 +21,13 @@ namespace App\Services\Statistics;
 
 class GoogleStatistics implements IStatisticsSource
 {
+    private SourceRepository $sourceRepository;
+
+    public function __construct(SourceRepository $sourceRepository)
+    {
+        $this->sourceRepository = $sourceRepository;
+    }
+
     /**
      * Calls the google api to get statistics and returns them.
      *
@@ -25,10 +35,55 @@ class GoogleStatistics implements IStatisticsSource
      */
     public function getDataByDay(): int
     {
-        // Call google api with cURL, Guzzle
-        // Do the logic and return data
+        $name = 'Google';
+        $type = 'day';
+        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
 
-        return mt_rand(0, 1000);
+        // It doesn't exist in the table.
+        if ($lastCall === false) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->insertLastAPICall([
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        // PDO Exception in repository, call google but don't update in DB.
+        if ($lastCall === null) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            return $valueFromGoogle;
+        }
+
+        // If last call was made before last 5 minutes, call google and update database.
+        if ($this->isDateBefore5Minutes($lastCall)) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->updateLastAPICall($lastCall['id'], [
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        return $lastCall['latest_data'];
     }
 
     /**
@@ -38,10 +93,55 @@ class GoogleStatistics implements IStatisticsSource
      */
     public function getDataByWeek(): int
     {
-        // Call google api with cURL, Guzzle
-        // Do the logic and return data
+        $name = 'Google';
+        $type = 'week';
+        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
 
-        return mt_rand(0, 1000);
+        // It doesn't exist in the table.
+        if ($lastCall === false) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->insertLastAPICall([
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        // PDO Exception in repository, call google but don't update in DB.
+        if ($lastCall === null) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            return $valueFromGoogle;
+        }
+
+        // If last call was made before last 5 minutes, call google and update database.
+        if ($this->isDateBefore5Minutes($lastCall)) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->updateLastAPICall($lastCall['id'], [
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        return $lastCall['latest_data'];
     }
 
     /**
@@ -51,10 +151,55 @@ class GoogleStatistics implements IStatisticsSource
      */
     public function getDataByMonth(): int
     {
-        // Call google api with cURL, Guzzle
-        // Do the logic and return data
+        $name = 'Google';
+        $type = 'month';
+        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
 
-        return mt_rand(0, 1000);
+        // It doesn't exist in the table.
+        if ($lastCall === false) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->insertLastAPICall([
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        // PDO Exception in repository, call google but don't update in DB.
+        if ($lastCall === null) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            return $valueFromGoogle;
+        }
+
+        // If last call was made before last 5 minutes, call google and update database.
+        if ($this->isDateBefore5Minutes($lastCall)) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->updateLastAPICall($lastCall['id'], [
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        return $lastCall['latest_data'];
     }
 
     /**
@@ -64,10 +209,55 @@ class GoogleStatistics implements IStatisticsSource
      */
     public function getDataByYear(): int
     {
-        // Call google api with cURL, Guzzle
-        // Do the logic and return data
+        $name = 'Google';
+        $type = 'year';
+        $lastCall = $this->sourceRepository->getLastAPICall($name, $type);
 
-        return mt_rand(0, 1000);
+        // It doesn't exist in the table.
+        if ($lastCall === false) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->insertLastAPICall([
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        // PDO Exception in repository, call google but don't update in DB.
+        if ($lastCall === null) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            return $valueFromGoogle;
+        }
+
+        // If last call was made before last 5 minutes, call google and update database.
+        if ($this->isDateBefore5Minutes($lastCall)) {
+            // Call google api with cURL, Guzzle
+            // Do the logic and return data
+            // Save in DB
+            $valueFromGoogle = mt_rand(0, 1000);
+
+            $this->sourceRepository->updateLastAPICall($lastCall['id'], [
+                'source_name' => $name,
+                'called_at' => date("Y-m-d H:i:s"),
+                'type' => $type,
+                'latest_data' => $valueFromGoogle
+            ]);
+
+            return $valueFromGoogle;
+        }
+
+        return $lastCall['latest_data'];
     }
 
     /**
@@ -81,5 +271,24 @@ class GoogleStatistics implements IStatisticsSource
         // Do the logic and return data
 
         return mt_rand(0, 1000);
+    }
+
+    // MOVE THIS FUNCTION TO TRAIT OR GLOBAL !!!
+    private function isDateBefore5Minutes($lastCall): bool
+    {
+        $date = $lastCall['called_at'];
+
+        // Convert the date to a Unix timestamp
+        $dateTimestamp = strtotime($date);
+
+        // Get the current Unix timestamp
+        $currentTimestamp = time();
+
+        // Calculate the difference in seconds between the two timestamps
+        $difference = $currentTimestamp - $dateTimestamp;
+
+        // If the difference is less than 300 seconds (five minutes), the date is within five minutes
+
+        return $difference >= 300;
     }
 }

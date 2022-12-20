@@ -25,6 +25,65 @@ class SourceRepository implements ISourceRepository
         }
     }
 
+    public function getLastAPICall($sourceName, $type)
+    {
+        try {
+            $sql = "SELECT * FROM `source_api_calls` WHERE source_name = :name AND type = :type";
+            $query = Database::getInstance()->getConnection()->prepare($sql);
+            $query->execute([
+                'name' => $sourceName,
+                'type' => $type
+            ]);
+
+            return $query->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            Logger::log([$e]);
+
+            return null;
+        }
+    }
+
+    public function insertLastAPICall(array $data)
+    {
+        try {
+            $sql = "INSERT INTO source_api_calls (source_name, called_at, type, latest_data) VALUES (?, ?, ?, ?)";
+            $query = Database::getInstance()->getConnection()->prepare($sql);
+            $result = $query->execute([
+                $data['source_name'],
+                $data['called_at'],
+                $data['type'],
+                $data['latest_data'],
+            ]);
+
+            return $result;
+        } catch (PDOException $e) {
+            Logger::log([$e]);
+
+            return false;
+        }
+    }
+
+    public function updateLastAPICall(int $id, array $data)
+    {
+        try {
+            $sql = "UPDATE `source_api_calls` SET source_name = ?, called_at = ?, type = ?, latest_data = ? WHERE id = ?";
+            $query = Database::getInstance()->getConnection()->prepare($sql);
+            $result = $query->execute([
+                $data['source_name'],
+                $data['called_at'],
+                $data['type'],
+                $data['latest_data'],
+                $id,
+            ]);
+
+            return $result;
+        } catch (PDOException $e) {
+            Logger::log([$e]);
+
+            return false;
+        }
+    }
+
     public function get()
     {
         throw new Exception("Unsupported operation.");
