@@ -9,10 +9,10 @@ use App\Repository\Source\SourceRepository;
  * ========= IMPORTANT =========
  *
  * We should implement a small cache system here.
- * Instead of calling positive guy's API every time we should check when was the last call made.
- * If the last call was made in the last 5 minutes we don't need to call positive guy API again.
+ * Instead of calling google's API every time we should check when was the last call made.
+ * If the last call was made in the last 5 minutes we don't need to call google API again.
  * Instead we should take the data from the database cache to save some time.
- * If the last call was made more than 5 minutes ago we should then call positive guy API, get
+ * If the last call was made more than 5 minutes ago we should then call google API, get
  * Their response and save that response in database cache.
  *
  * Database table should contain TIMESTAMP of the last call to the API as well as the name of the SERVICE
